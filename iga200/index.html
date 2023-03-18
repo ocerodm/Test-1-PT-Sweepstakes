@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+		var redirurl = 'http://www.google.com'//change to desired redirect url
+        function getURLParameter(name) {
+            return decodeURI(
+                (RegExp(name + '=' + '(.+?)(&|$)').exec(location.search) || [, null])[1] || ''
+            );
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
+    <title>Congratulations!</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+</head>
+<body>
+<div class="header_container">
+<div class="header"></div>
+</div>
+<div class="content">
+<div class="main-content" id="content1">
+<div style="max-width: 400px; margin: 0 auto;"><img src="img/b1ulq09xtrpdh5ejm7fc.png" style="width: 400px;" height="300" /></div>
+<h1>Win a chance to get <strong>a $200 IGA<sup>&#174;</sup> Groceries Voucher</strong>!</h1>
+<h2>Answer the poll and win yoru chance for voucher!</h2>
+<hr /><br /><br />
+<div id="q1" align="center">
+<p class="question"><strong>Question 1 of 3</strong> <br />Are you male or female?</p>
+<br />
+<div class="button bq1">Male</div>
+<div class="button bq1">Female</div>
+</div>
+<div id="q2" align="center">
+<p class="question"><strong>Question 2 of 3</strong> <br />How old are you?</p>
+<br />
+<div class="button bq2">18-29</div>
+<div class="button bq2">30-39</div>
+<div class="button bq2">40-49</div>
+<div class="button bq2">50+</div>
+</div>
+<div id="q3" align="center">
+<p class="question"><strong>Question 3 of 3</strong> <br />Do you shop online?</p>
+<br />
+<div class="button bq4">Yes</div>
+<div class="button bq4">No</div>
+</div>
+</div>
+<div class="main-content" id="content2">
+<h1 style="text-align: center;">Submitting Answers...</h1>
+<p class="loading"><img src="images/loading.gif" /></p>
+<div style="max-width: 320px; margin: 0 auto;">
+<p class="result" id="result1">Analyzing Results... </p>
+<p class="result" id="result2">☑ Congratulations! You qualify</p>
+<p class="result" id="result3">Redirecting to prize page... </p>
+</div>
+</div>
+</div>
+<p>
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".bq1").click(function() {
+                $("#q1").fadeOut(0);
+                $("#q2").fadeIn(500);
+            });
+            $(".bq2").click(function() {
+                $("#q2").fadeOut(0);
+                $("#q3").fadeIn(500);
+            });
+            $(".bq3").click(function() {
+                $("#q3").fadeOut(0);
+                $("#q4").fadeIn(500);
+            });
+            $(".bq4").click(function() {
+                $("#content1").fadeOut(0);
+                $("#content2").fadeIn();
+                setTimeout(function() {
+                    $("#result1").fadeIn(1000);
+                }, 3000);
+                setTimeout(function() {
+                    $("#result2").fadeIn(1000);
+                }, 4500);
+                setTimeout(function() {
+                    $("#result3").fadeIn(1000);
+                }, 6000);
+                setTimeout(function() {
+                    $("#content2").fadeOut();
+                }, 7500);
+                window.setTimeout(function() {
+                    window.location = redirurl;
+                    return false;
+                }, 7500);
+            });
+        });
+    </script>
+</p>
+</body>
+</html>
